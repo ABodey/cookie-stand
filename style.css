@@ -4,6 +4,7 @@ table  {
   border-spacing:0;
   text-align:center;
   vertical-align:top;
+  display: inline-block;
 }
 table td{
   font-family:Arial, sans-serif;

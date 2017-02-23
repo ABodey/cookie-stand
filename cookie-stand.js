@@ -1,4 +1,4 @@
-
+// object literals
 var pioneer = {
   minC : 17,
   maxC : 88,
@@ -25,12 +25,30 @@ var pearl = {
   avgC : 2.6
 };
 
+//function for the hourly cookie
+function hourlySales(minC, maxC, avgC, shopC) {
+  var cookiePrint = document.getElementByClass(shopC);
+  for ( var i = 0; i < 8; i++ ) {
+  (   Math.floor((Math.floor(Math.random() * (maxC - minC)) + minC)*avgC));
 
-function hourlySales(minC, maxC) {
-  return Math.floor(Math.random() * (maxC - minC)) + minC;
 }
+};
 
 
+// function buildTable() {
+//   var studentTable = document.getElementById("studentList");
+//   studentTable.innerHTML = tableHeaderRow;
+//   var message = "Students in the class:";
+//   for (var index = 0; index < students.length; index++) {
+//     message += "\n  " + students[index];
+//     var studentRow = "<tr><td>"+students[index].name+"</td>";
+//     studentRow += "<td>"+students[index].phone+"</td>";
+//     studentRow += "<td>"+students[index].email+"</td></tr>";
+//     studentTable.innerHTML += studentRow;
+//   }
+//   studentTable.innerHTML += "<tr><td colspan='2'>Total Students:</td><td>" + students.length + "</td></tr>";
+//   console.log(message);
+// }
 
 
 
