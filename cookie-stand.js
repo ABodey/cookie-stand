@@ -1,39 +1,150 @@
+//global variables
+
+
 // object literals
 var pioneer = {
   minC : 17,
   maxC : 88,
-  avgC : 5.2
+  avgC : 5.2,
+  hourlySales : function () {
+    var totalcook = 0;
+    for ( var i = 0; i < 8; i++ ) {
+      var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
+      console.log(ckprnt);
+      totalcook += ckprnt
+    };
+    console.log(totalcook);
+    return totalcook;
+    //cookiePrint.innerHTML=  ;
+  }
 };
 var portland = {
   minC : 6,
   maxC : 24,
-  avgC : 1.2
+  avgC : 1.2,
+  hourlySales : function () {
+    var totalcook = 0;
+    for ( var i = 0; i < 8; i++ ) {
+      var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
+      console.log(ckprnt);
+      totalcook += ckprnt
+    };
+    console.log(totalcook);
+    //cookiePrint.innerHTML=  ;
+  }
 };
 var washington = {
   minC : 11,
   maxC : 38,
-  avgC : 1.9
+  avgC : 1.9,
+  hourlySales : function () {
+    var totalcook = 0;
+    for ( var i = 0; i < 8; i++ ) {
+      var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
+      console.log(ckprnt);
+      totalcook += ckprnt
+    };
+    console.log(totalcook);
+    //cookiePrint.innerHTML=  ;
+  }
 };
 var sellwood = {
   minC : 20,
   maxC : 48,
-  avgC : 3.3
+  avgC : 3.3,
+  hourlySales : function () {
+    var totalcook = 0;
+    for ( var i = 0; i < 8; i++ ) {
+      var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
+      console.log(ckprnt);
+      totalcook += ckprnt
+    };
+    console.log(totalcook);
+    //cookiePrint.innerHTML=  ;
+  }
 };
 var pearl = {
   minC : 3,
   maxC : 24,
-  avgC : 2.6
+  avgC : 2.6,
+  hourlySales : function () {
+    var totalcook = 0;
+    var ckieArray =[];
+    for ( var i = 0; i < 8; i++ ) {
+      var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
+      console.log(ckprnt);
+      ckieArray.push(ckprnt);
+      totalcook += ckprnt;
+    };
+    console.log(totalcook);
+    return ckieArray;
+    //cookiePrint.innerHTML=  ;
+  }
 };
+
 
 //function for the hourly cookie
-function hourlySales(minC, maxC, avgC, shopC) {
-  var cookiePrint = document.getElementByClass(shopC);
+function hourlySales(minC, maxC, avgC ) {
   for ( var i = 0; i < 8; i++ ) {
-  (   Math.floor((Math.floor(Math.random() * (maxC - minC)) + minC)*avgC));
-
-}
+    var ckprnt = (Math.floor((Math.floor(Math.random() * (maxC - minC)) + minC)*avgC))
+    console.log(ckprnt);
+    totalcook += ckprnt
+  };
+  console.log(totalcook);
+  //cookiePrint.innerHTML=  ;
 };
 
+
+function tableOfHours() {
+
+  var body = document.getElementsByTagName("body")[0];
+  var tbl     = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+
+
+  for (var j = 0; j < 1; j++) {
+    var row = document.createElement("tr");
+
+    for (var k = 0; k < 10; k++) {
+      var cell = document.createElement("td");
+      var resultscookies = pearl.hourlySales();
+      console.log(resultscookies);
+     var cellText = document.createTextNode(resultscookies[k]);
+
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+
+    //row added to end of table body
+    tblBody.appendChild(row);
+  }
+
+  // append the <tbody> inside the <table>
+  tbl.appendChild(tblBody);
+  // put <table> in the <body>
+  body.appendChild(tbl);
+  // tbl border attribute to
+//  tbl.setAttribute("border", "2");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var cookiePrint = document.getElementsByClassName(shopC);
+// return  cookiePrint.innerHTML= message;
 
 // function buildTable() {
 //   var studentTable = document.getElementById("studentList");
@@ -49,27 +160,6 @@ function hourlySales(minC, maxC, avgC, shopC) {
 //   studentTable.innerHTML += "<tr><td colspan='2'>Total Students:</td><td>" + students.length + "</td></tr>";
 //   console.log(message);
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
