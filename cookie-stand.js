@@ -3,67 +3,228 @@
 
 // object literals
 var pioneer = {
+  shopName: "Pioneer Square",
   minC : 17,
   maxC : 88,
   avgC : 5.2,
   hourlySales : function () {
     var totalcook = 0;
+    var ckieArray =[];
     for ( var i = 0; i < 8; i++ ) {
       var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
       console.log(ckprnt);
-      totalcook += ckprnt
+      ckieArray.push(ckprnt);
+      totalcook += ckprnt;
     };
+    ckieArray.push(totalcook);
     console.log(totalcook);
-    return totalcook;
-    //cookiePrint.innerHTML=  ;
-  }
-};
+    return ckieArray;
+  },
+  tableOfHours: function() {
+
+    var body = document.getElementsByTagName("body")[0];
+    var tbl     = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+
+
+    for (var j = 0; j < 1; j++) {
+      var row = document.createElement("tr");
+
+      for (var k = -1; k < 9; k++) {
+        var cell = document.createElement("td");
+        var resultscookies = this.hourlySales();
+        console.log(resultscookies);
+        if ( k == -1) {
+          var cellText = document.createTextNode(this.shopName);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+
+        }else{
+       var cellText = document.createTextNode(resultscookies[k]);
+
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+  };
+      //row added to end of table body
+      tblBody.appendChild(row);
+    }
+
+    // append the <tbody> inside the <table>
+    tbl.appendChild(tblBody);
+    // put <table> in the <body>
+    body.appendChild(tbl);
+  },
+  };
+
 var portland = {
+  shopName: "Portland Airport",
   minC : 6,
   maxC : 24,
   avgC : 1.2,
   hourlySales : function () {
     var totalcook = 0;
+    var ckieArray =[];
     for ( var i = 0; i < 8; i++ ) {
       var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
       console.log(ckprnt);
-      totalcook += ckprnt
+      ckieArray.push(ckprnt);
+      totalcook += ckprnt;
     };
+    ckieArray.push(totalcook);
     console.log(totalcook);
-    //cookiePrint.innerHTML=  ;
-  }
-};
-var washington = {
+    return ckieArray;
+  },
+  tableOfHours: function() {
+
+    var body = document.getElementsByTagName("body")[0];
+    var tbl     = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+
+
+    for (var j = 0; j < 1; j++) {
+      var row = document.createElement("tr");
+
+      for (var k = -1; k < 9; k++) {
+        var cell = document.createElement("td");
+        var resultscookies = this.hourlySales();
+        console.log(resultscookies);
+        if ( k == -1) {
+          var cellText = document.createTextNode(this.shopName);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+
+        }else{
+       var cellText = document.createTextNode(resultscookies[k]);
+
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+  };
+      //row added to end of table body
+      tblBody.appendChild(row);
+    }
+
+    // append the <tbody> inside the <table>
+    tbl.appendChild(tblBody);
+    // put <table> in the <body>
+    body.appendChild(tbl);
+  },
+  };
+
+  var washington = {
+  shopName: "Washington Square",
   minC : 11,
   maxC : 38,
   avgC : 1.9,
   hourlySales : function () {
     var totalcook = 0;
+    var ckieArray =[];
     for ( var i = 0; i < 8; i++ ) {
       var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
       console.log(ckprnt);
-      totalcook += ckprnt
+      ckieArray.push(ckprnt);
+      totalcook += ckprnt;
     };
+    ckieArray.push(totalcook);
     console.log(totalcook);
-    //cookiePrint.innerHTML=  ;
-  }
-};
-var sellwood = {
+    return ckieArray;
+  },
+  tableOfHours: function() {
+
+    var body = document.getElementsByTagName("body")[0];
+    var tbl     = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+
+
+    for (var j = 0; j < 1; j++) {
+      var row = document.createElement("tr");
+
+      for (var k = -1; k < 9; k++) {
+        var cell = document.createElement("td");
+        var resultscookies = this.hourlySales();
+        console.log(resultscookies);
+        if ( k == -1) {
+          var cellText = document.createTextNode(this.shopName);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+
+        }else{
+       var cellText = document.createTextNode(resultscookies[k]);
+
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+  };
+      //row added to end of table body
+      tblBody.appendChild(row);
+    }
+
+    // append the <tbody> inside the <table>
+    tbl.appendChild(tblBody);
+    // put <table> in the <body>
+    body.appendChild(tbl);
+  },
+  };
+
+  var sellwood = {
+  shopName : "Sellwood",
   minC : 20,
   maxC : 48,
   avgC : 3.3,
   hourlySales : function () {
     var totalcook = 0;
+    var ckieArray =[];
     for ( var i = 0; i < 8; i++ ) {
       var ckprnt = (Math.floor((Math.floor(Math.random() * (this.maxC - this.minC)) + this.minC)*this.avgC))
       console.log(ckprnt);
-      totalcook += ckprnt
+      ckieArray.push(ckprnt);
+      totalcook += ckprnt;
     };
+    ckieArray.push(totalcook);
     console.log(totalcook);
-    //cookiePrint.innerHTML=  ;
-  }
-};
+    return ckieArray;
+  },
+  tableOfHours: function() {
+
+    var body = document.getElementsByTagName("body")[0];
+    var tbl     = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+
+
+    for (var j = 0; j < 1; j++) {
+      var row = document.createElement("tr");
+
+      for (var k = -1; k < 9; k++) {
+        var cell = document.createElement("td");
+        var resultscookies = this.hourlySales();
+        console.log(resultscookies);
+        if ( k == -1) {
+          var cellText = document.createTextNode(this.shopName);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+
+        }else{
+       var cellText = document.createTextNode(resultscookies[k]);
+
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+  };
+      //row added to end of table body
+      tblBody.appendChild(row);
+    }
+
+    // append the <tbody> inside the <table>
+    tbl.appendChild(tblBody);
+    // put <table> in the <body>
+    body.appendChild(tbl);
+  },
+  };
+
+
 var pearl = {
+  shopName: "Pearl District",
   minC : 3,
   maxC : 24,
   avgC : 2.6,
@@ -76,56 +237,46 @@ var pearl = {
       ckieArray.push(ckprnt);
       totalcook += ckprnt;
     };
+    ckieArray.push(totalcook);
     console.log(totalcook);
     return ckieArray;
-    //cookiePrint.innerHTML=  ;
-  }
-};
+  },
+  tableOfHours: function() {
+
+    var body = document.getElementsByTagName("body")[0];
+    var tbl     = document.createElement("table");
+    var tblBody = document.createElement("tbody");
 
 
-//function for the hourly cookie
-function hourlySales(minC, maxC, avgC ) {
-  for ( var i = 0; i < 8; i++ ) {
-    var ckprnt = (Math.floor((Math.floor(Math.random() * (maxC - minC)) + minC)*avgC))
-    console.log(ckprnt);
-    totalcook += ckprnt
+    for (var j = 0; j < 1; j++) {
+      var row = document.createElement("tr");
+
+      for (var k = -1; k < 9; k++) {
+        var cell = document.createElement("td");
+        var resultscookies = this.hourlySales();
+        console.log(resultscookies);
+        if ( k == -1) {
+          var cellText = document.createTextNode(this.shopName);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+
+        }else{
+       var cellText = document.createTextNode(resultscookies[k]);
+
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
   };
-  console.log(totalcook);
-  //cookiePrint.innerHTML=  ;
-};
-
-
-function tableOfHours() {
-
-  var body = document.getElementsByTagName("body")[0];
-  var tbl     = document.createElement("table");
-  var tblBody = document.createElement("tbody");
-
-
-  for (var j = 0; j < 1; j++) {
-    var row = document.createElement("tr");
-
-    for (var k = 0; k < 10; k++) {
-      var cell = document.createElement("td");
-      var resultscookies = pearl.hourlySales();
-      console.log(resultscookies);
-     var cellText = document.createTextNode(resultscookies[k]);
-
-      cell.appendChild(cellText);
-      row.appendChild(cell);
+      //row added to end of table body
+      tblBody.appendChild(row);
     }
 
-    //row added to end of table body
-    tblBody.appendChild(row);
-  }
-
-  // append the <tbody> inside the <table>
-  tbl.appendChild(tblBody);
-  // put <table> in the <body>
-  body.appendChild(tbl);
-  // tbl border attribute to
-//  tbl.setAttribute("border", "2");
-}
+    // append the <tbody> inside the <table>
+    tbl.appendChild(tblBody);
+    // put <table> in the <body>
+    body.appendChild(tbl);
+},
+};
 
 
 
@@ -133,12 +284,33 @@ function tableOfHours() {
 
 
 
+function cookieSale(){
+  pioneer.tableOfHours();
+  portland.tableOfHours();
+  washington.tableOfHours();
+  sellwood.tableOfHours();
+  pearl.tableOfHours();
+};
 
 
 
 
 
 
+
+
+
+
+// //function for the hourly cookie
+// function hourlySales(minC, maxC, avgC ) {
+//   for ( var i = 0; i < 8; i++ ) {
+//     var ckprnt = (Math.floor((Math.floor(Math.random() * (maxC - minC)) + minC)*avgC))
+//     console.log(ckprnt);
+//     totalcook += ckprnt
+//   };
+//   console.log(totalcook);
+//   //cookiePrint.innerHTML=  ;
+// };
 
 
 
