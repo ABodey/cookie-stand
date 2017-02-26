@@ -36,16 +36,16 @@ var pioneer = {
         console.log(resultscookies);
         if ( k == -1) {
           var cellText = document.createTextNode(this.shopName);
-            cell.appendChild(cellText);
-            row.appendChild(cell);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
 
         }else{
-       var cellText = document.createTextNode(resultscookies[k]);
+          var cellText = document.createTextNode(resultscookies[k]);
 
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      }
-  };
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        }
+      };
       //row added to end of table body
       tblBody.appendChild(row);
     }
@@ -55,7 +55,7 @@ var pioneer = {
     // put <table> in the <body>
     body.appendChild(tbl);
   },
-  };
+};
 
 var portland = {
   shopName: "Portland Airport",
@@ -77,7 +77,7 @@ var portland = {
   },
   tableOfHours: function() {
 
-    var body = document.getElementsByTagName("body")[0];
+    var body = document.getElementsByClassName("bakeOrder")[0];
     var tbl     = document.createElement("table");
     var tblBody = document.createElement("tbody");
 
@@ -91,16 +91,16 @@ var portland = {
         console.log(resultscookies);
         if ( k == -1) {
           var cellText = document.createTextNode(this.shopName);
-            cell.appendChild(cellText);
-            row.appendChild(cell);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
 
         }else{
-       var cellText = document.createTextNode(resultscookies[k]);
+          var cellText = document.createTextNode(resultscookies[k]);
 
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      }
-  };
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        }
+      };
       //row added to end of table body
       tblBody.appendChild(row);
     }
@@ -110,9 +110,9 @@ var portland = {
     // put <table> in the <body>
     body.appendChild(tbl);
   },
-  };
+};
 
-  var washington = {
+var washington = {
   shopName: "Washington Square",
   minC : 11,
   maxC : 38,
@@ -132,7 +132,7 @@ var portland = {
   },
   tableOfHours: function() {
 
-    var body = document.getElementsByTagName("body")[0];
+    var body = document.getElementsByClassName("bakeOrder")[0];
     var tbl     = document.createElement("table");
     var tblBody = document.createElement("tbody");
 
@@ -146,16 +146,16 @@ var portland = {
         console.log(resultscookies);
         if ( k == -1) {
           var cellText = document.createTextNode(this.shopName);
-            cell.appendChild(cellText);
-            row.appendChild(cell);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
 
         }else{
-       var cellText = document.createTextNode(resultscookies[k]);
+          var cellText = document.createTextNode(resultscookies[k]);
 
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      }
-  };
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        }
+      };
       //row added to end of table body
       tblBody.appendChild(row);
     }
@@ -165,9 +165,9 @@ var portland = {
     // put <table> in the <body>
     body.appendChild(tbl);
   },
-  };
+};
 
-  var sellwood = {
+var sellwood = {
   shopName : "Sellwood",
   minC : 20,
   maxC : 48,
@@ -187,7 +187,7 @@ var portland = {
   },
   tableOfHours: function() {
 
-    var body = document.getElementsByTagName("body")[0];
+    var body = document.getElementsByClassName("bakeOrder")[0];
     var tbl     = document.createElement("table");
     var tblBody = document.createElement("tbody");
 
@@ -201,16 +201,16 @@ var portland = {
         console.log(resultscookies);
         if ( k == -1) {
           var cellText = document.createTextNode(this.shopName);
-            cell.appendChild(cellText);
-            row.appendChild(cell);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
 
         }else{
-       var cellText = document.createTextNode(resultscookies[k]);
+          var cellText = document.createTextNode(resultscookies[k]);
 
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      }
-  };
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        }
+      };
       //row added to end of table body
       tblBody.appendChild(row);
     }
@@ -220,7 +220,7 @@ var portland = {
     // put <table> in the <body>
     body.appendChild(tbl);
   },
-  };
+};
 
 
 var pearl = {
@@ -243,10 +243,9 @@ var pearl = {
   },
   tableOfHours: function() {
 
-    var body = document.getElementsByTagName("body")[0];
-    var tbl     = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-
+    var body = document.getElementsByClassName("bakeOrder")[0];
+    // var tbl     = document.createElement("table");
+    // var tblBody = document.createElement("tbody");
 
     for (var j = 0; j < 1; j++) {
       var row = document.createElement("tr");
@@ -257,25 +256,22 @@ var pearl = {
         console.log(resultscookies);
         if ( k == -1) {
           var cellText = document.createTextNode(this.shopName);
-            cell.appendChild(cellText);
-            row.appendChild(cell);
-
+          cell.appendChild(cellText);
+          row.appendChild(cell);
         }else{
-       var cellText = document.createTextNode(resultscookies[k]);
-
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      }
-  };
+          var cellText = document.createTextNode(resultscookies[k]);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        }
+      };
       //row added to end of table body
-      tblBody.appendChild(row);
+      body.appendChild(row);
     }
-
     // append the <tbody> inside the <table>
-    tbl.appendChild(tblBody);
+    // tbl.appendChild(tblBody);
     // put <table> in the <body>
-    body.appendChild(tbl);
-},
+    // body.appendChild(tbl);
+  },
 };
 
 
@@ -285,10 +281,10 @@ var pearl = {
 
 
 function cookieSale(){
-  pioneer.tableOfHours();
-  portland.tableOfHours();
-  washington.tableOfHours();
-  sellwood.tableOfHours();
+  // pioneer.tableOfHours();
+  // portland.tableOfHours();
+  // washington.tableOfHours();
+  // sellwood.tableOfHours();
   pearl.tableOfHours();
 };
 

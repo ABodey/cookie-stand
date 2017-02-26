@@ -1,3 +1,35 @@
+* {
+  border: 1px solid red;
+}
+
+
+html {
+  background-color: #ffd6cc;
+padding: 0 100px 0 100px;
+}
+
+h1{
+  text-align: center;
+  background-color: #00cc00;
+}
+
+ h2, h3 {
+  text-align: center;
+}
+
+.salmonCookies{
+  width: 690px;
+  float: right;
+}
+
+.dogTreats{
+  width: 690px;
+  float: left;
+}
+
+footer{
+  text-align: center;
+}
 
 table  {
   border-collapse:collapse;
@@ -11,6 +43,7 @@ table  {
   margin: 0 auto;
 }
 table td{
+  width: 100px;
   font-family:Arial, sans-serif;
   width: 10%;
   font-size:14px;
@@ -29,10 +62,32 @@ table th{font-family:Arial, sans-serif;
   border-width:1px;
   overflow:hidden;
   word-break:normal;
-  background-color: #cccccc;
+  background-color: #00cc00;
 
 }
 
 tr:nth-of-type(even){
-  background-color: #dadaff;
+  background-color: #80ff80;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+}
+
+#dogKid {
+  width: 300px;
+  height: 300px;
+}
+
+#dogSalmon {
+  width: 320px;
+  height: 320px;
+  float: right;
+}
+
+#dogHold {
+  width: 300px;
+  height: 300px;
+ margin: 0 330px;
 }
