@@ -22,10 +22,7 @@ var pioneer = {
   },
   tableOfHours: function() {
 
-    var body = document.getElementsByTagName("body")[0];
-    var tbl     = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-
+    var body = document.getElementsByClassName("bakeOrder")[0];
 
     for (var j = 0; j < 1; j++) {
       var row = document.createElement("tr");
@@ -38,22 +35,15 @@ var pioneer = {
           var cellText = document.createTextNode(this.shopName);
           cell.appendChild(cellText);
           row.appendChild(cell);
-
         }else{
           var cellText = document.createTextNode(resultscookies[k]);
-
           cell.appendChild(cellText);
           row.appendChild(cell);
         }
       };
       //row added to end of table body
-      tblBody.appendChild(row);
+      body.appendChild(row);
     }
-
-    // append the <tbody> inside the <table>
-    tbl.appendChild(tblBody);
-    // put <table> in the <body>
-    body.appendChild(tbl);
   },
 };
 
@@ -78,9 +68,6 @@ var portland = {
   tableOfHours: function() {
 
     var body = document.getElementsByClassName("bakeOrder")[0];
-    var tbl     = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-
 
     for (var j = 0; j < 1; j++) {
       var row = document.createElement("tr");
@@ -93,22 +80,15 @@ var portland = {
           var cellText = document.createTextNode(this.shopName);
           cell.appendChild(cellText);
           row.appendChild(cell);
-
         }else{
           var cellText = document.createTextNode(resultscookies[k]);
-
           cell.appendChild(cellText);
           row.appendChild(cell);
         }
       };
       //row added to end of table body
-      tblBody.appendChild(row);
+      body.appendChild(row);
     }
-
-    // append the <tbody> inside the <table>
-    tbl.appendChild(tblBody);
-    // put <table> in the <body>
-    body.appendChild(tbl);
   },
 };
 
@@ -133,9 +113,6 @@ var washington = {
   tableOfHours: function() {
 
     var body = document.getElementsByClassName("bakeOrder")[0];
-    var tbl     = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-
 
     for (var j = 0; j < 1; j++) {
       var row = document.createElement("tr");
@@ -148,22 +125,15 @@ var washington = {
           var cellText = document.createTextNode(this.shopName);
           cell.appendChild(cellText);
           row.appendChild(cell);
-
         }else{
           var cellText = document.createTextNode(resultscookies[k]);
-
           cell.appendChild(cellText);
           row.appendChild(cell);
         }
       };
       //row added to end of table body
-      tblBody.appendChild(row);
+      body.appendChild(row);
     }
-
-    // append the <tbody> inside the <table>
-    tbl.appendChild(tblBody);
-    // put <table> in the <body>
-    body.appendChild(tbl);
   },
 };
 
@@ -188,9 +158,6 @@ var sellwood = {
   tableOfHours: function() {
 
     var body = document.getElementsByClassName("bakeOrder")[0];
-    var tbl     = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-
 
     for (var j = 0; j < 1; j++) {
       var row = document.createElement("tr");
@@ -203,24 +170,18 @@ var sellwood = {
           var cellText = document.createTextNode(this.shopName);
           cell.appendChild(cellText);
           row.appendChild(cell);
-
         }else{
           var cellText = document.createTextNode(resultscookies[k]);
-
           cell.appendChild(cellText);
           row.appendChild(cell);
         }
       };
       //row added to end of table body
-      tblBody.appendChild(row);
+      body.appendChild(row);
     }
-
-    // append the <tbody> inside the <table>
-    tbl.appendChild(tblBody);
-    // put <table> in the <body>
-    body.appendChild(tbl);
   },
 };
+
 
 
 var pearl = {
@@ -244,8 +205,6 @@ var pearl = {
   tableOfHours: function() {
 
     var body = document.getElementsByClassName("bakeOrder")[0];
-    // var tbl     = document.createElement("table");
-    // var tblBody = document.createElement("tbody");
 
     for (var j = 0; j < 1; j++) {
       var row = document.createElement("tr");
@@ -267,10 +226,6 @@ var pearl = {
       //row added to end of table body
       body.appendChild(row);
     }
-    // append the <tbody> inside the <table>
-    // tbl.appendChild(tblBody);
-    // put <table> in the <body>
-    // body.appendChild(tbl);
   },
 };
 
@@ -281,10 +236,12 @@ var pearl = {
 
 
 function cookieSale(){
-  // pioneer.tableOfHours();
-  // portland.tableOfHours();
-  // washington.tableOfHours();
-  // sellwood.tableOfHours();
+var clear = getElementsByClassName("bakeOrder");
+
+  pioneer.tableOfHours();
+  portland.tableOfHours();
+  washington.tableOfHours();
+  sellwood.tableOfHours();
   pearl.tableOfHours();
 };
 
