@@ -236,7 +236,7 @@ var pearl = {
 
 
 function cookieSale(){
-var clear = getElementsByClassName("bakeOrder");
+//var clear = getElementsByClassName("bakeOrder");
 
   pioneer.tableOfHours();
   portland.tableOfHours();

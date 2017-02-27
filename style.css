@@ -1,11 +1,13 @@
-* {
+/** {
   border: 1px solid red;
-}
+}*/
 
 
 html {
   background-color: #ffd6cc;
 padding: 0 100px 0 100px;
+font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 h1{
@@ -29,6 +31,7 @@ h1{
 
 footer{
   text-align: center;
+  padding-top: 30px;
 }
 
 table  {
@@ -38,7 +41,6 @@ table  {
   vertical-align:top;
   /*display: inline-block;*/
   width:1000px;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
   margin: 0 auto;
 }
