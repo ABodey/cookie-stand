@@ -12,7 +12,7 @@ var CookieStore = function(shopName, minCookies, maxCookies, avgCookies){
   this.avgCookies = avgCookies;
   this.hourlySales = function () {
     var totalCookies = 0;
-    var cookieArray =[];
+    var cookieArray =[this.shopName];
     for ( var index = 0; index < 8; index++ ) {
       var cookiePrint = (Math.floor((Math.floor(Math.random() * (this.maxCookies - this.minCookies)) + this.minCookies)*this.avgCookies))
       //    console.log(cookiePrint);
@@ -27,22 +27,16 @@ var CookieStore = function(shopName, minCookies, maxCookies, avgCookies){
     var body = document.getElementsByClassName("bakeOrder")[0];
     var resultscookies = this.hourlySales();
     var row = document.createElement("tr");
-    for (var k = -1; k < 9; k++) {
+    for (var index = 0; index < 10; index++) {
       var cell = document.createElement("td");
-      //      console.log(resultscookies);
-      if ( k == -1) {
-        var cellText = document.createTextNode(this.shopName);
+        var cellText = document.createTextNode(resultscookies[index]);
         cell.appendChild(cellText);
         row.appendChild(cell);
-      }else{
-        var cellText = document.createTextNode(resultscookies[k]);
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      }
     };
     //row added to end of table body
     body.appendChild(row);
   }
+//  this.
 };
 
 
@@ -65,7 +59,13 @@ function cookieSale(){
 
 cookieSale();
 
-
+// function storeDataTable() {
+//   pioneer.tableOfHours();
+//   portland.tableOfHours();
+//   washington.tableOfHours();
+//   sellwood.tableOfHours();
+//   pearl.tableOfHours();
+// };
 
 
 
