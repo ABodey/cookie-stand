@@ -10,6 +10,7 @@ var CookieStore = function(shopName, minCookies, maxCookies, avgCookies){
   this.minCookies = minCookies;
   this.maxCookies = maxCookies;
   this.avgCookies = avgCookies;
+  this.dataArray = [this.shopName, this.minCookies, this.maxCookies, this.avgCookies]
   this.hourlySales = function () {
     var totalCookies = 0;
     var cookieArray =[this.shopName];
@@ -23,13 +24,14 @@ var CookieStore = function(shopName, minCookies, maxCookies, avgCookies){
     console.log(cookieArray);
     return cookieArray;
   },
-  this.tableOfHours = function() {
-    var body = document.getElementsByClassName("bakeOrder")[0];
-    var resultscookies = this.hourlySales();
+  //build both a table for cookie store data or cookie sales data
+  this.tableBuilder = function(tableLocation, arrayDataBuilder) {
+    var body = document.getElementsByClassName(tableLocation)[0];
+    var resultArray = arrayDataBuilder;
     var row = document.createElement("tr");
-    for (var index = 0; index < resultscookies.length; index++) {
+    for (var index = 0; index < resultArray.length; index++) {
       var cell = document.createElement("td");
-      var cellText = document.createTextNode(resultscookies[index]);
+      var cellText = document.createTextNode(resultArray[index]);
       cell.appendChild(cellText);
       row.appendChild(cell);
     };
@@ -53,23 +55,21 @@ var stores = [pioneer, portland, washington, sellwood, pearl ];
 
 
 // Function to run all in-object functions
-function cookieSale(storeTableOfHours){
-  for (var index = 0; index < stores.length; index++) {
-    stores[index].tableOfHours();
+function cookieSale(){
+      for (var index = 0; index < stores.length; index++) {
+        var resultsArray = stores[index].hourlySales();
+    stores[index].tableBuilder("bakeOrder", resultsArray);
   }
 };
 
-
 cookieSale();
 
-// function storeDataTable() {
-//   pioneer.tableOfHours();
-//   portland.tableOfHours();
-//   washington.tableOfHours();
-//   sellwood.tableOfHours();
-//   pearl.tableOfHours();
-// };
-
+function cookieSale(){
+      for (var index = 0; index < stores.length; index++) {
+        var resultsArray = stores[index].hourlySales();
+    stores[index].tableBuilder("bakeOrder", resultsArray);
+  }
+};
 
 
 
