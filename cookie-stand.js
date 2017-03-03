@@ -55,11 +55,9 @@ var stores = [pioneer, portland, washington, sellwood, pearl ];
 // Function to run all in-object functions
 function cookieSale(storeTableOfHours){
   for (var index = 0; index < stores.length; index++) {
-     stores[index].tableOfHours();
+    stores[index].tableOfHours();
   }
-  };
-
-
+};
 
 
 cookieSale();
