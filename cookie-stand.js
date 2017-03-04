@@ -1,5 +1,6 @@
 //global variables
 var storeDataTableHeader =("<tr><th>Location</th>  <th>Minimum / Customers</th>  <th>Maximum / Customers</th>  <th>Average Cookie / Sales</th></tr>");
+var cookieSaleTableHeader = ("<tr><th><!--<button <onclick='cookieSale()'>Run</button>--></th> <th>10am</th><th>11am</th><th>12pm</th><th>1pm</th><th>2pm</th><th>3pm</th><th>4pm</th><th>5pm</th><th>Total</th></tr>")
 var timeOfDay = ["10am","11am","12pm","1pm","2pm","3pm","4pm","5pm"]
 
 
@@ -38,19 +39,20 @@ var CookieStore = function(shopName, minCookies, maxCookies, avgCookies){
     //row added to end of table body
     body.appendChild(row);
   }
-  //  this.
 };
+
+// Store objects array
+var stores = [];
+
 
 
 // Store objects being constructed
-var pioneer = new CookieStore("Pioneer Square", 17, 88, 5.2);
-var portland = new CookieStore("Portland Airport", 6, 24, 1.2);
-var washington = new CookieStore("Washington Square", 11, 38, 1.9);
-var sellwood = new CookieStore("Sellwood", 20, 48, 3.3);
-var pearl = new CookieStore("Pearl District", 3, 24, 2.6);
+var pioneer = stores.push(new CookieStore("Pioneer Square", 17, 88, 5.2));
+var portland = stores.push(new CookieStore("Portland Airport", 6, 24, 1.2));
+var washington = stores.push(new CookieStore("Washington Square", 11, 38, 1.9));
+var sellwood = stores.push(new CookieStore("Sellwood", 20, 48, 3.3));
+var pearl = stores.push(new CookieStore("Pearl District", 3, 24, 2.6));
 
-// Store methods array
-var stores = [pioneer, portland, washington, sellwood, pearl ];
 
 
 
@@ -64,31 +66,16 @@ function cookieSale(){
 
 cookieSale();
 
-function cookieSale(){
+function cookieStoreTable(){
       for (var index = 0; index < stores.length; index++) {
-        var resultsArray = stores[index].hourlySales();
-    stores[index].tableBuilder("bakeOrder", resultsArray);
+        var resultsArray = stores[index].dataArray;
+    stores[index].tableBuilder("storeInfo", resultsArray);
   }
 };
 
+cookieStoreTable();
 
-
-
-
-
-
-
-// function buildTable() {
-//   var studentTable = document.getElementById("studentList");
-//   studentTable.innerHTML = tableHeaderRow;
-//   var message = "Students in the class:";
-//   for (var index = 0; index < students.length; index++) {
-//     message += "\n  " + students[index];
-//     var studentRow = "<tr><td>"+students[index].name+"</td>";
-//     studentRow += "<td>"+students[index].phone+"</td>";
-//     studentRow += "<td>"+students[index].email+"</td></tr>";
-//     studentTable.innerHTML += studentRow;
-//   }
-//   studentTable.innerHTML += "<tr><td colspan='2'>Total Students:</td><td>" + students.length + "</td></tr>";
-//   console.log(message);
-// }
+//function to delete table and place in header for .tableBuilder to finish out
+function tableClear(tableLocation, tableHeaderRow){
+  document.getElementsByClassName(tableLocation)[0].innerHTML= (tableHeaderRow)
+}
