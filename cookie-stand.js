@@ -58,6 +58,7 @@ var pearl = stores.push(new CookieStore("Pearl District", 3, 24, 2.6));
 
 // Function to run all in-object functions
 function cookieSale(){
+  tableClear("bakeOrder",cookieSaleTableHeader )
       for (var index = 0; index < stores.length; index++) {
         var resultsArray = stores[index].hourlySales();
     stores[index].tableBuilder("bakeOrder", resultsArray);
@@ -67,6 +68,7 @@ function cookieSale(){
 cookieSale();
 
 function cookieStoreTable(){
+  tableClear("storeInfo", storeDataTableHeader)
       for (var index = 0; index < stores.length; index++) {
         var resultsArray = stores[index].dataArray;
     stores[index].tableBuilder("storeInfo", resultsArray);
@@ -78,4 +80,17 @@ cookieStoreTable();
 //function to delete table and place in header for .tableBuilder to finish out
 function tableClear(tableLocation, tableHeaderRow){
   document.getElementsByClassName(tableLocation)[0].innerHTML= (tableHeaderRow)
+}
+
+function toTitleCase(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+
+function addStore(){
+  var storeLocation = document.getElementById("storeLocationInput").value;
+  var storeMinCust = document.getElementById("storeMinCustInput").value;
+  var storeMaxCust = document.getElementById("storeMaxCustInput").value;
+  var avgCookieSale = document.getElementById("avgCookieSaleInput").value;
+  
 }
