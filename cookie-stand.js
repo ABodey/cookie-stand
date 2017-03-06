@@ -73,6 +73,7 @@ function cookieStoreTable(){
         var resultsArray = stores[index].dataArray;
     stores[index].tableBuilder("storeInfo", resultsArray);
   }
+  console.log("cookieStoreTable");
 };
 
 cookieStoreTable();
@@ -88,9 +89,34 @@ function toTitleCase(str)
 }
 
 function addStore(){
+  console.log("addstore");
   var storeLocation = document.getElementById("storeLocationInput").value;
   var storeMinCust = document.getElementById("storeMinCustInput").value;
   var storeMaxCust = document.getElementById("storeMaxCustInput").value;
   var avgCookieSale = document.getElementById("avgCookieSaleInput").value;
-  
+var openStore = stores.push(new CookieStore(storeLocation, storeMinCust, storeMaxCust, avgCookieSale));
+ console.log(openStore);
+cookieSale();
+cookieStoreTable();
 }
+
+
+
+function boarderColor(){
+  console.log("blur");
+  var storeLocation = document.getElementById("storeLocationInput");
+  var storeMinCust = document.getElementById("storeMinCustInput");
+  var storeMaxCust = document.getElementById("storeMaxCustInput");
+  var avgCookieSale = document.getElementById("avgCookieSaleInput");
+  if ((~~q5)<32){
+    console.log("upblur");
+    src.innerHTML = "<img class='icon' id='arrow' src='up-arrow-circle-hi.png'>";
+  }else if((~~q5)>32){
+    console.log("downblur");
+    src.innerHTML = "<img class='icon' id='arrow' src='down-arrow-circle-hi.png'>";
+  }else if((~~q5) ===32){
+    console.log("blurwait");
+    src.innerHTML = "  ";
+  }
+
+};

@@ -117,3 +117,14 @@ tr:nth-of-type(even){
   height: 300px;
  margin: 0 330px;
 }
+
+
+.wrong {
+  border-color: red;
+
+}
+
+.corect {
+  border-color: red;
+
+}
